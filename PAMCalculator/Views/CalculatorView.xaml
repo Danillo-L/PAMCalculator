@@ -3,10 +3,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PAMCalculator.Views.CalculatorView"
              Title="CalculatorView">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <VerticalStackLayout Spacing="20">
+        <VerticalStackLayout Spacing="5" HorizontalOptions="Center">
+            <Label Text="Resultado" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Entry Text="{Binding Resultado}" Placeholder="Resultado" Keyboard="Numeric" WidthRequest="300"/>
+        </VerticalStackLayout>
+        
+        <VerticalStackLayout Spacing="5" HorizontalOptions="Center">
+            <Label Text="Primerio termo" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Entry Text="{Binding PrimeiroTermo}"  Placeholder="1° Termo" Keyboard="Numeric" WidthRequest="300"/>
+        </VerticalStackLayout>
+        
+        <VerticalStackLayout Spacing="5" HorizontalOptions="Center">
+            <Label Text="Segundo termo" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Entry Text="{Binding SegundoTermo}" Placeholder="2° Termo" Keyboard="Numeric" WidthRequest="300"/>
+        </VerticalStackLayout>
+        
+        <VerticalStackLayout Spacing="20" HorizontalOptions="Center">
+            <Button Text="Somar" Command="{Binding SomarCommand}" WidthRequest="300"/>
+            <Button Text="Subtrair" Command="{Binding SubtrairCommand}" WidthRequest="300"/>
+            <Button Text="Multiplicar" Command="{Binding MultiplicarCommand}" WidthRequest="300"/>
+            <Button Text="Dividir" Command="{Binding DividirCommand}" WidthRequest="300"/>
+            <Button Text="Elevar" Command="{Binding ElevarCommand}" WidthRequest="300"/>
+            <Button Text="Raiz" Command="{Binding RaizCommand}" WidthRequest="300"/>
+        </VerticalStackLayout>
+        
     </VerticalStackLayout>
 </ContentPage>

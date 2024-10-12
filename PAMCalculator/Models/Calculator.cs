@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,19 +10,54 @@ namespace PAMCalculator.Models
     public class Calculator
     {
         public double PrimeiroTermo { get; set; }
-        public double SegundoTermo2 { get; set; }
+        public double SegundoTermo { get; set; }
         public double Resultado { get; set; }
 
-        public void Somar() { }
+        public double Somar(double n1,double n2) { 
+          //Esse método soma dois números.
+            PrimeiroTermo = n1;
+            SegundoTermo = n2;
+            Resultado = n1 + n2;
+            return Resultado;
+        }
 
-        public void Subtrair() { }
+        public double Subtrair(double n1, double n2) {
+          //Esse método subtrai dois números.
+            PrimeiroTermo = n1;
+            SegundoTermo = n2;
+            Resultado = n1 - n2;
+            return Resultado;
+        }
 
-        public void Multiplicar() { }
+        public double Multiplicar(double n1, double n2) {
+            //Esse método multiplica dois números.
+            PrimeiroTermo = n1;
+            SegundoTermo = n2;
+            Resultado = n1 * n2;
+            return Resultado;
+        }
 
-        public void Dividir() { }
+        public double Dividir(double n1, double n2) {
+            //Esse método divide dois números.
+            PrimeiroTermo = n1;
+            SegundoTermo = n2;
+            Resultado = n1 / n2;
+            return Resultado;
+        }
 
-        public void Elevar() { }
+        public double Elevar(double n1, double n2) {
+            PrimeiroTermo = n1;
+            SegundoTermo = n2;
+            Resultado = Math.Pow(n1, n2);
+            return Resultado;
+        }
 
-        public void Raiz() { }
+        public double Raiz(double n1, double n2) {
+            PrimeiroTermo = n1;
+            SegundoTermo = n2;
+            Resultado = Math.Pow(n1, 1/n2);
+            return Resultado;
+        }
     }
 }
+
